@@ -1,0 +1,72 @@
+:root{
+    --green: #137878;
+    --white: #ffffff;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.login{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    border: 2px solid black;
+}
+.vconnect{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+}
+.inputbox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+.inputbox input,
+.inputbox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 20px;
+    margin: 9px 0;
+    border: none;
+    border-bottom: 3px solid#000;
+    outline: none;
+    resize: none;
+}
+.inputbox span
+{
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.inputbox input:focus ~ span,
+.inputbox input:valid ~ span,
+.inputbox textarea:focus ~ span,
+.inputbox textarea:valid ~ span
+{
+    color: black;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+button[type="submit"]
+{
+    width: 30%;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    transition: .3s ease background-color;
+}
+button[type="submit"]:hover
+{
+    background-color: #04999A;
+}
