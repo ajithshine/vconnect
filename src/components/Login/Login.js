@@ -11,14 +11,14 @@ export default function Login() {
             <form className='form'>
                 <div class="inputbox">
                     <input type="text"  required="required" />
-                    <span>Full Name</span>
+                    <span>Username</span>
                 </div>
                 <div class="inputbox">
-                    <input type="email" required="required" />
-                    <span>Email</span>
+                    <input type="password" required="required" />
+                    <span>Password</span>
                 </div>
-                <button type="submit" class="send">Send</button>
-                <p className='signup1'>Don't have an account <span><Link to='./Signup' className='signup2'>Sign up</Link></span></p>
+                <button type="submit" class="send">Log In</button>
+                <p className='signup1'>Don't have an account? <span><Link to='./Signup' className='signup2'>Sign up</Link></span></p>
             </form>
         </div>
         <div className='vconnect'>
