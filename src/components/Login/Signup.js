@@ -25,6 +25,27 @@ export default function Signup() {
           <input type="password" required="required" />
           <span>Confirm Password</span>
       </div>
+      <div class={Sign.wrapper}>
+        <p className={Sign.radioheading}>Gender</p>
+        <div className={Sign.radiocover}>
+          <div className={Sign.radiocover1}>
+            <input type="radio" name="select" id="option1" checked />
+              <label class={Sign.option}>
+                  Male
+              </label>
+          </div>
+          <div className={Sign.radiocover2}>
+            <input type="radio" name="select" id="option2" />
+              <label class={Sign.option}>
+                  Female
+              </label>
+          </div>
+        </div>
+      </div>
+      <div className={Sign.dob}>
+      <label className={Sign.dobheading}>Date of birth</label>
+      <input type="date" className={Sign.dobinput} />
+      </div>
       </form>
       <button type="submit" class={Sign.send}>create account</button>
       <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
