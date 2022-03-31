@@ -1,0 +1,25 @@
+.popup{
+    position: fixed;
+    
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0%;
+    background-color: rgba(156, 25, 49, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner{
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    padding: 30px;
+    border: 2px solid blue;
+    background-color: chartreuse;
+}
+.close{
+    position: fixed;
+    top: 5%;
+    left: 92%;
+}
