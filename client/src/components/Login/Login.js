@@ -13,11 +13,11 @@ export default function Login() {
                     <input type="text"  required="required" />
                     <span>Username</span>
                 </div>
-                <div class="inputbox">
+                <div className="inputbox">
                     <input type="password" required="required" />
                     <span>Password</span>
                 </div>
-                <button type="submit" class="send"><Link to="/Home" className='sendlink'>Log In</Link> </button>
+                <button type="submit" className="send"><Link to="/Home" className='sendlink'>Log In</Link> </button>
                 <p className='signup1'>Don't have an account? <span><Link to='/Signup' className='signup2'>Sign up</Link></span></p>
             </form>
         </div>

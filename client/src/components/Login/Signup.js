@@ -84,8 +84,8 @@ export default function Signup() {
           <input type="date" className={Sign.dobinput} />
         </div> */}
         <button type="submit" className={Sign.send}>Create account</button>
+        <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
       </form>
-      <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
     </div>
   )
 }
