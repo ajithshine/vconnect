@@ -98,3 +98,8 @@ button[type="submit"]:hover
 {
     background-color: #04999A;
 }
+
+.sendlink{
+    text-decoration: none;
+    color: var(--white);
+}
