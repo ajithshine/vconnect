@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import Post from '../Post/Post';
-=======
 import axios from 'axios';
->>>>>>> f1c67aa58bc024faa845423bce479f3d88640ac7
 
 export default function Login() {
     const [username, setUsername] = useState('')
@@ -57,12 +53,5 @@ export default function Login() {
                 <p className='tagline'>Where <span className='tagline1'>Vconnect</span>s<br />World connects</p>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-    <Post />
-    </>
-  )
-=======
     )
->>>>>>> f1c67aa58bc024faa845423bce479f3d88640ac7
 }
