@@ -1,14 +1,14 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Signup from './components/Login/Signup';
-import Index from './components/Index';
+import Login from './components/Login/Login';
 
 function App() {
   return (
     <>
       <Router>
       <Routes>
-        <Route path="/" element={<Index />} exact />
+        <Route path="/" element={<Login />} exact />
         <Route path="/Signup" element={<Signup />} />
       </Routes>
       </Router>
