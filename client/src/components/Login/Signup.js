@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Sign from './Signup.module.css';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function Signup() {
   const [email, setEmail] = useState('')
@@ -9,20 +10,18 @@ export default function Signup() {
 
   async function registerUser(event) {
     event.preventDefault()
-    const response = await fetch('https://localhost:3001/api/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email,
-        username,
-        password,
-      }),
+    const response = await axios.post('http://localhost:3001/api/register', {
+      email,
+      username,
+      password,
     })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
-    const data = await response.json()
-    console.log(data)
   }
 
   return (
@@ -84,8 +83,8 @@ export default function Signup() {
           <input type="date" className={Sign.dobinput} />
         </div> */}
         <button type="submit" className={Sign.send}>Create account</button>
-        <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
       </form>
+      <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
     </div>
   )
 }
