@@ -2,6 +2,7 @@ import react from 'react';
 import React from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
+import Post from '../Post/Post';
 
 export default function Login() {
   return (
@@ -26,6 +27,7 @@ export default function Login() {
             <p className='tagline'>Where <span className='tagline1'>Vconnect</span>s<br />World connects</p>
         </div>
     </div>
+    <Post />
     </>
   )
 }
