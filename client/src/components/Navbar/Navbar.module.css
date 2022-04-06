@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Redressed&display=swap');
+
+:root{
+    --green: #137878;
+    --white: #ffffff;
+}
+.outer{
+    position: fixed;
+    width: 18em;
+    height: 100vh;
+    background-color: var(--white);
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    height: 30%;
+}
+.heading p{
+    color: var(--green);
+    font-size: 70px;
+    font-family: 'Redressed';
+}
+.list{
+    list-style-type: none;
+    font-size: 30px;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Post from '../Post/Post';
 
 export default function Login() {
     const [username, setUsername] = useState('')
@@ -44,7 +45,7 @@ export default function Login() {
                             onChange={(e) => setPassword(e.target.value)} />
                         <span>Password</span>
                     </div>
-                    <button type="submit" className="send"><Link to="/Home" className='sendlink'>Log In</Link> </button>
+                    <button type="submit" className="send"><Link to="/" className='sendlink'>Log In</Link> </button>
                     <p className='signup1'>Don't have an account? <span><Link to='/Signup' className='signup2'>Sign up</Link></span></p>
                 </form>
             </div>
@@ -52,6 +53,7 @@ export default function Login() {
                 <h1 className='heading1'>Vconnect</h1>
                 <p className='tagline'>Where <span className='tagline1'>Vconnect</span>s<br />World connects</p>
             </div>
+            <Post />
         </div>
     )
 }
