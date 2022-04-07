@@ -9,12 +9,12 @@ export default function Login() {
 
     async function loginUser(event) {
         event.preventDefault()
-        const response = await axios.post('http://localhost:3001/api/login', {
+        await axios.post('http://localhost:3001/api/login', {
             username,
             password,
         })
             .then(function (response) {
-                if(response.data.user == true){
+                if(response.data.user){
                     alert("Login Successful")
                 }else{
                     alert("Incorrect Username or Password")

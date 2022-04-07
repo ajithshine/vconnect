@@ -14,8 +14,8 @@ export default function Signup() {
 
   async function registerUser(event) {
     event.preventDefault()
-    if (password == confirmPassword) {
-      const response = await axios.post('http://localhost:3001/api/register', {
+    if (password === confirmPassword) {
+      await axios.post('http://localhost:3001/api/register', {
         email,
         username,
         password,
