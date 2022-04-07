@@ -101,5 +101,7 @@ button[type="submit"]:hover
 
 .sendlink{
     text-decoration: none;
+    display: flex;
+    margin: 0 auto;
     color: var(--white);
 }
