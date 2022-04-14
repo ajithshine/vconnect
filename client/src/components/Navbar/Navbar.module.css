@@ -9,6 +9,7 @@
     width: 18em;
     height: 100vh;
     background-color: var(--white);
+    border: 2px solid black;
 }
 .heading{
     display: flex;
@@ -23,4 +24,9 @@
 .list{
     list-style-type: none;
     font-size: 30px;
+}
+
+.iconlink{
+    font-size: 3em;
+    color: #fa9200;
 }

@@ -8,8 +8,12 @@ export default function Navbar() {
             <p>Vconnect</p>
         </div>
         <ul className={Navcss.list}>
+            <li> Home</li>
+            
             <li>Add post</li>
             <li>Settings</li>
+            <li>Profile</li>
+            <li>Relatio</li>
         </ul>
     </div>
   )
