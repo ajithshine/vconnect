@@ -14,7 +14,12 @@ export default function Searchbar() {
             <input type="text" placeholder="Search.." name="search" />
         </form>
         <CgProfile className={searchcss.icon} />
-        <IoNotificationsSharp className={searchcss.icon} />
+        <IoNotificationsSharp className={`${searchcss.icon} ${searchcss.hover}`} />
+        <div className={searchcss.dropdowncontent}>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
         <FaSignOutAlt className={searchcss.icon} />
     </nav>
   )

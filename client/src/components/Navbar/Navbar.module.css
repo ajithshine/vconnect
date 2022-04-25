@@ -28,6 +28,7 @@
 }
 .list li{
     margin-top: 20px;
+    cursor: pointer;
 }
 .icons{
     color: var(--white);
