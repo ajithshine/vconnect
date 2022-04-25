@@ -39,10 +39,7 @@ input[type=text] {
   font-size: 24px;
   color: #000000;
 }
-.icon{
-  display: flex;
-  margin: 0 auto;
-  align-self: center;
+.icon {
   font-size: 40px;
   color: #ffffff;
   background-color: var(--green);
@@ -50,11 +47,18 @@ input[type=text] {
   border-radius: 15px;
   cursor: pointer;
 }
+.hover{
+  display: flex;
+  margin: 0 auto;
+  align-self: center;
+
+}
 
 .dropdowncontent {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  margin-top: 40px;
+  background-color: transparent;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -62,6 +66,7 @@ input[type=text] {
 
 .dropdowncontent a {
   color: black;
+  background-color: var(--white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;

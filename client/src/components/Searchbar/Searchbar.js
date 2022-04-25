@@ -13,14 +13,17 @@ export default function Searchbar() {
             <button type="submit" className={searchcss.button}><FiSearch className={searchcss.icons} /></button>
             <input type="text" placeholder="Search.." name="search" />
         </form>
-        <CgProfile className={searchcss.icon} />
-        <IoNotificationsSharp className={`${searchcss.icon} ${searchcss.hover}`} />
+        <CgProfile className={`${searchcss.icon} ${searchcss.hover}`} />
+        <div className={searchcss.hover}>
+        <IoNotificationsSharp className={searchcss.icon} />
         <div className={searchcss.dropdowncontent}>
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
-        <FaSignOutAlt className={searchcss.icon} />
+
+        </div>
+        <FaSignOutAlt className={`${searchcss.icon} ${searchcss.hover}`} />
     </nav>
   )
 }
