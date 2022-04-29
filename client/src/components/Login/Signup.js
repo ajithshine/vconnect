@@ -86,6 +86,7 @@ export default function Signup() {
                 id="option1"
                 value='male'
                 onChange={(e) => setGender(e.target.value)}
+                required
               />
               <label className={Sign.option}>
                 Male
@@ -98,6 +99,7 @@ export default function Signup() {
                 id="option2"
                 value='female'
                 onChange={(e) => setGender(e.target.value)}
+                required
               />
               <label className={Sign.option}>
                 Female
@@ -112,6 +114,7 @@ export default function Signup() {
             className={Sign.dobinput}
             value={date}
             onChange={(e) => setDate(e.target.value)}
+            required
           />
         </div>
         <button type="submit" className={Sign.send}>Create account</button>

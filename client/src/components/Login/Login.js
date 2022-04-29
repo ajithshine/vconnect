@@ -16,7 +16,7 @@ export default function Login() {
         })
             .then(function (response) {
                 if(response.data.user){
-                    alert("Login Successful")
+                    console.log("Login Successful");
                 }else{
                     alert("Incorrect Username or Password")
                 }
@@ -45,7 +45,7 @@ export default function Login() {
                             onChange={(e) => setPassword(e.target.value)} />
                         <span>Password</span>
                     </div>
-                    <button type="submit" className="send"><Link to="/" className='sendlink'>Log In</Link> </button>
+                    <button type="submit" className="send">Log In</button>
                     <p className='signup1'>Don't have an account? <span><Link to='/Signup' className='signup2'>Sign up</Link></span></p>
                 </form>
             </div>
@@ -53,7 +53,6 @@ export default function Login() {
                 <h1 className='heading1'>Vconnect</h1>
                 <p className='tagline'>Where <span className='tagline1'>Vconnect</span>s<br />World connects</p>
             </div>
-            <Post />
         </div>
     )
 }
