@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import Navbar from './components/Navbar/Navbar';
 import Searchbar from './components/Searchbar/Searchbar';
 import Dashboard from './components/Dashboard/Dashboard';
+import MyProfile from './components/MyProfile/MyProfile';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} exact />
         <Route path="/Signup" element={<Signup />} />
+        <Route path="/MyProfile" element={<MyProfile />} />
       </Routes>
       </Router>
       
