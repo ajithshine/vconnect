@@ -5,9 +5,9 @@
 .outer {
   position: fixed;
   z-index: -1;
-  margin-left: 0%;
-  height: 50em;
-  width: 100%;
+  margin-left: 28%;
+  height: 4em;
+  width: 72%;
   display: grid;
   grid-template-columns: 70% 7% 7% 7%;
   background-color: #e5e5e5;
@@ -19,8 +19,8 @@
   flex-direction: row;
   height: 4em;
   width: 90%;
-  position: relative;
-  left: 200px;
+  /* position: relative; */
+  /* left: 200px; */
 }
 input[type="text"] {
   width: 70%;
@@ -52,9 +52,10 @@ input[type="text"] {
   cursor: pointer;
   display: flex;
   justify-content: space-around;
-  position: relative;
+  /* position: relative;
   top: -365px;
-  left: 96px;
+  left: 96px; */
+  z-index: 10;
 }
 .hover {
   display: flex;

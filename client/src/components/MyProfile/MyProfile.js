@@ -4,10 +4,10 @@ import ProfileDetails from './ProfileDetails'
 
 function MyProfile() {
   return (
-    <>
+    <div>
         <Searchbar />
         <ProfileDetails />
-    </>
+    </div>
   )
 }
 

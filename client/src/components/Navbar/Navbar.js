@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Navcss from './Navbar.module.css'; 
 import { FaHome } from "react-icons/fa";
 import { IoAdd } from "react-icons/io5";
@@ -7,7 +8,6 @@ import { CgProfile } from "react-icons/cg";
 import { BsPeopleFill } from "react-icons/bs";
 
 import {useState} from 'react'
-import { Link } from 'react-router-dom';
 import postcss from '../Post/Post.module.css';
 import Popup from '../PopUp/Popup'
 
@@ -39,7 +39,7 @@ export default function Navbar() {
 
 
             <li><MdSettings className={Navcss.icons} /> Settings</li>
-            <li><CgProfile className={Navcss.icons} /> Profile</li>
+            <li><Link to='/MyProfile'><CgProfile className={Navcss.icons} /> Profile</Link></li>
             <li><BsPeopleFill className={Navcss.icons} /> Relation</li>
         </ul>
     </div>
