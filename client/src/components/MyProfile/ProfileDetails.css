@@ -65,14 +65,14 @@
 }
 .button1 {
   background-color: white; 
-  color: black; 
-  border: 2px solid #000000;
+  color: #2ebfbf; 
+  border: 2px solid #2ebfbf;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .button1:hover {
-  background-color: #000000;
+  background-color: #2ebfbf;
   color: white;
 }

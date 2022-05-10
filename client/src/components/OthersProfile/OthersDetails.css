@@ -1,0 +1,79 @@
+.details {
+    border: 2px solid black;
+    height: 90vh;
+    width: 25%;
+    position: fixed;
+    z-index: 10;
+    left: 40px;
+    top: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+  }
+  .pics{
+    border-radius: 50%;
+    height: 25%;
+    width: 40%;
+    position: relative;
+    /* display: flex; */
+    /* justify-items: center; */
+    left: 30%;
+    top: 4%;
+    border:1px solid black;
+  }
+  .name{
+      text-align: center;
+      position: relative;
+      top: 40px;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .bio{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-height: 60px;
+      max-width: 60px;
+      position:relative;
+      left: 30px;
+      top: 60px;
+  }
+  .post li{
+     list-style-type: none;
+     position: relative;
+     top: 60px;
+     left: -8px;
+  }
+  .following li{
+    list-style-type: none;
+    position: relative;
+    left: 84px;
+    top: -2px;
+    font-weight: bold;
+  
+  }
+  .button{
+      background-color: #000000; /* Green */
+      border: none;
+      color: white;
+      padding: 11px 27px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 34px 90px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 40em;
+    
+  }
+  .button1 {
+    background-color: white; 
+    color: #069292; 
+    border: 2px solid #069292;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .button1:hover {
+    background-color: #069292;
+    color: white;
+  }
+  
