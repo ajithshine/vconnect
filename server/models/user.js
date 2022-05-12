@@ -7,6 +7,18 @@ const User = new mongoose.Schema(
         password: { type: String, required: true },
         gender: { type: String, required: true },
         date: { type: Date, required: true },
+        profilePicture: {
+            type: String,
+            default: ""
+        },
+        followers: {
+            type: Array,
+            default: []
+        },
+        following: {
+            type: Array,
+            default: []
+        }
     },
     { collection: 'user-data' }
 )
