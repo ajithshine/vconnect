@@ -37,7 +37,7 @@
   .FirstTab ,
   .SecondTab  {
     font-size: 1.5rem;
-    text-align: right;
+    text-align: left;
     color: black;
   }
   .heading{
@@ -83,19 +83,15 @@
     width: 10%;
     height: 15%;
     margin-top: 3%;
-    margin-left: 4%;
+    margin-left: -19%;
     border-radius: 20%;
     padding-left: 50%;
 
 }
-.large p{
-    padding-left: 2%;
-    padding-top: 8%;
-}
 .outlet{
   align-items: flex-start;
-  margin-top: 20%;
-  margin-left: 1%;
+  margin-top: 15%;
+  margin-left: -10%;
 }
 .SecondTab div{
   padding-bottom: 2%;
@@ -106,3 +102,63 @@
 .save{
   justify-content: center;
 }
+
+#pass{
+  width: 41%;
+  margin-left: 5%;
+  border: 1px solid black;
+  padding:1%;
+  text-align: left;
+}
+label{
+  margin-left: 20%;
+  font-size: 80%;
+}
+#mail{
+  width: 41%;
+  margin-left:8%;
+  border: 1px solid black;
+  text-align: left;
+  margin-top: 2%;
+}
+#bio{
+  margin-left: 14%;
+  width: 41%;
+  margin-top: 2%;
+  text-align: left;
+  border: 1px solid black;
+}
+.bio label{
+  text-align: top;
+}
+.button{
+  background-color: #000000; /* Green */
+  border: none;
+  color: white;
+  padding: 11px 27px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 34px 90px;
+  margin-left: 45%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 40em;
+
+}
+.button1 {
+background-color: white; 
+color: #02a8a0; 
+border: 2px solid #02a8a0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.button1:hover {
+background-color:  #02a8a0;
+color: white;
+}
+
+
+
