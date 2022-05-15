@@ -1,0 +1,197 @@
+
+   ul.nav {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    padding-left: 5px;
+    padding-top: 210px;
+    color: #black;
+    margin-left:80px;
+    margin-top: -223px;
+  
+    
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+  ul.nav li {
+    width: 100%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    border-radius: 2rem;
+  }
+  ul.nav li:nth-child(2) {
+    border-radius:2rem;
+  }
+  ul.nav li:hover {
+    background: rgba(50, 224, 196, 0.15);
+  }
+  ul.nav li.active {
+    background: #05c7c7;
+  }
+  .FirstTab ,
+  .SecondTab  {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .heading{
+    display: flex;
+    justify-content:flex-start ;
+    height: 30%;
+}
+.heading p{
+    color: var(--green);
+    font-size: 70px;
+    font-family: 'Redressed';
+    margin-top: 5px;
+    margin-left: 40px;
+}
+  .container{
+    display: flex;
+    flex-direction: row;
+}
+.small{
+    width: 55vh;
+    height: 75vh;
+    border: 1px solid black;
+    margin-top: 1%;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 120%;
+    margin-left: 30px;
+    
+  
+}
+
+.large{
+    width: 130vh;
+    height: 75vh;
+    border:1px solid black;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+
+
+}
+.pic{
+    width: 10%;
+    height: 15%;
+    margin-top: 3%;
+    margin-left: -19%;
+    border-radius: 20%;
+    padding-left: 50%;
+
+}
+.outlet{
+  align-items: flex-start;
+  margin-top: 15%;
+  margin-left: -10%;
+}
+#pass{
+  width: 41%;
+  margin-left: 5%;
+  padding:1%;
+  text-align: left;
+}
+label{
+  margin-left: 20%;
+  font-size: 80%;
+}
+
+#mail{
+  width: 41%;
+  margin-left:8%;
+  text-align: left;
+  margin-top: 2%;
+}
+#bio{
+  margin-left: 14%;
+  width: 41%;
+  margin-top: 2%;
+  text-align: left;
+  border-radius: 30px;
+  background-color: #f2f2f2;
+}
+.bio label{
+  text-align: top;
+}
+.button{
+  background-color: #000000; 
+  border: none;
+  color: white;
+  padding: 11px 27px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 34px 90px;
+  margin-left: 45%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 40em;
+
+}
+.button1 {
+background-color: white; 
+color: #02a8a0; 
+border: 2px solid #02a8a0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.button1:hover {
+background-color:  #02a8a0;
+color: white;
+}
+#old{
+  width: 41%;
+  margin-left: 7%;
+  padding:1%;
+  text-align: left;
+  height: 25%;
+}
+ input{
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  border: none;
+}
+#new{
+  width: 41%;
+  margin-left: 6%;
+  padding:1%;
+  text-align: left;
+  margin-top: 2%;
+  height: 25%;
+}
+#confirm{
+  width: 41%;
+  margin-left: 2%;
+  padding:1%;
+  text-align: left;
+  margin-top: 2%;
+  height: 25%;
+}
+.button2 {
+  background-color: white; 
+  color: #02a8a0; 
+  border: 2px solid #02a8a0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 55%;
+  }
+  
+  .button2:hover {
+  background-color:  #02a8a0;
+  color: white;
+  }
+
+
+

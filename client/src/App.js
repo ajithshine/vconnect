@@ -7,6 +7,7 @@ import Searchbar from './components/Searchbar/Searchbar';
 import Dashboard from './components/Dashboard/Dashboard';
 import MyProfile from './components/MyProfile/MyProfile';
 import OthersProfile from './components/OthersProfile/OthersProfile';
+import Settings from './components/Settings/Settings';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/MyProfile" element={<MyProfile />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/OthersProfile" element={<OthersProfile />} />
+        <Route path="/" element={<Settings />} />
       </Routes>
       </Router>
       
