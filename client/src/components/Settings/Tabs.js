@@ -38,7 +38,9 @@ const Tabs = () => {
                    {activeTab === "tab1" ? <FirstTab /> : <SecondTab />}
                 </div>
                 <img src={picture} alt="profile picture" className={Setcss.pic} />
-               <p>aashlianoop</p>
+                   <div>
+                       <p>aashlianoop</p>
+                   </div>
           
             </div>
         </div>

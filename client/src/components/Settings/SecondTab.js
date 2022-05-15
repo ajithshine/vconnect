@@ -4,23 +4,24 @@ const SecondTab = () => {
     <div className="SecondTab">
     
             
-      <div>
-          <label for="pass">Old Password</label>
-          <input type="password" id="pass" name="old"
+    
+          <label for="old">Old Password</label>
+          <input type="password" id="old" name="old"
            maxLength="8" required></input>
-       </div>
-       <div>
-          <label for="pass">New Password</label>
-          <input type="password" id="pass" name="new"
+    
+      
+          <label for="new">New Password</label>
+          <input type="password" id="new" name="new"
            maxlength="8" required></input>
-       </div>
-       <div className="confirm">
-          <label for="pass">Confirm Password</label>
-          <input type="password" id="pass" name="confirm"
+      
+    
+          <label for="confirm">Confirm Password</label>
+          <input type="password" id="confirm" name="confirm"
            maxlength="8" required></input>
-       </div>
+          
+          <button className="button button2">Save</button>
 
-       <input type="button" value="Save" className="save"></input>
+
   
     </div>
   );
