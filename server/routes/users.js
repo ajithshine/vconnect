@@ -1,7 +1,8 @@
 const router = require("express").Router();
+const authToken = require("../middleware/authToken")
 
-router.get("/",(req,res)=>{
-    res.send("Hai How are you");
+router.get("/",authToken,(req,res)=>{
+    res.send("Hai Youre logged in");
 })
 
 

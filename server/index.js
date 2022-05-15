@@ -28,11 +28,6 @@ mongoose.connect(process.env.MONGO_URL, () => {
 })
 
 
-app.get('/', async (req, res) => {
-  res.send("Hai Welcome")
-})
-
-
 app.listen(3001, () => {
   console.log(`Example app listening on port 3001`)
 })
