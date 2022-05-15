@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import searchcss from "./Searchbar.module.css";
 import { CgProfile } from "react-icons/cg";
 import { FiSearch } from "react-icons/fi";
@@ -14,7 +15,7 @@ export default function Searchbar() {
         </button>
         <input type="text" placeholder="Search.." name="search" />
       </form>
-      <CgProfile className={`${searchcss.icon} ${searchcss.hover}`} />
+      <Link to='/MyProfile' className={searchcss.hover}><CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
       <div className={searchcss.hover}>
         <IoNotificationsSharp className={searchcss.icon} />
         <div className={searchcss.dropdowncontent}>

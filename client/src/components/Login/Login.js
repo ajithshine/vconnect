@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
+// import { Redirect } from 'react-redirect'
 import axios from 'axios';
 import Post from '../Post/Post';
 
@@ -17,6 +18,7 @@ export default function Login() {
             .then(function (response) {
                 if(response.data.user){
                     console.log("Login Successful");
+                    // <Redirect to={"/Dashboard"} />
                 }else{
                     alert("Incorrect Username or Password")
                 }
@@ -32,18 +34,18 @@ export default function Login() {
             <div className='login'>
                 <form className='form' onSubmit={loginUser}>
                     <div className="inputbox">
-                        <input type="text"
-                            required="required"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)} />
-                        <span>Username</span>
-                    </div>
-                    <div className="inputbox">
                         <input type="password"
                             required="required"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
                         <span>Password</span>
+                    </div>
+                    <div className="inputbox">
+                        <input type="text"
+                            required="required"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)} />
+                        <span>Username</span>
                     </div>
                     <button type="submit" className="send">Log In</button>
                     <p className='signup1'>Don't have an account? <span><Link to='/Signup' className='signup2'>Sign up</Link></span></p>

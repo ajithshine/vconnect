@@ -7,17 +7,19 @@ import Searchbar from './components/Searchbar/Searchbar';
 import Dashboard from './components/Dashboard/Dashboard';
 import MyProfile from './components/MyProfile/MyProfile';
 import OthersProfile from './components/OthersProfile/OthersProfile';
+import Test from './components/Test';
 
 function App() {
   return (
     <>
       <Router>
       <Routes>
-        <Route path="/Login" element={<Login />} exact />
+        {/* <Route path="/Login" element={<Login />} exact /> */}
         <Route path="/Signup" element={<Signup />} />
         <Route path="/MyProfile" element={<MyProfile />} />
         <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/" element={<OthersProfile />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Others" element={<Test />} />
       </Routes>
       </Router>
       

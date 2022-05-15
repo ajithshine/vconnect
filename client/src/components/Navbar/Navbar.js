@@ -39,7 +39,7 @@ export default function Navbar() {
 
 
             <li><MdSettings className={Navcss.icons} /> Settings</li>
-            <li><Link to='/MyProfile'><CgProfile className={Navcss.icons} /> Profile</Link></li>
+            <Link to='/MyProfile' className={Navcss.nodec}><li><CgProfile className={Navcss.icons} /> Profile</li></Link> 
             <li><BsPeopleFill className={Navcss.icons} /> Relation</li>
         </ul>
     </div>
