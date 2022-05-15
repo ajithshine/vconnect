@@ -10,7 +10,7 @@ const User = new mongoose.Schema(
         token: { type: String },
         profilePicture: {
             type: String,
-            default: ""
+            default: "Not Uploaded"
         },
         followers: {
             type: Array,
