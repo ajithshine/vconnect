@@ -7,13 +7,17 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { FaSignOutAlt } from "react-icons/fa";
 
 export default function Searchbar() {
+  const handleLogout = () => {
+		localStorage.removeItem("token");
+		window.location.reload();
+	};
   return (
     <div className={searchcss.outer}>
       <form className={searchcss.bar}>
         <button type="submit" className={searchcss.button}>
           <FiSearch className={searchcss.icons} />
         </button>
-        <input type="text" placeholder="Search.." name="search" />
+        <input className="search_box" type="text" placeholder="Search.." name="search"/>
       </form>
       <Link to='/MyProfile' className={searchcss.hover}><CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
       <div className={searchcss.hover}>
@@ -24,7 +28,7 @@ export default function Searchbar() {
           <a href="#">Link 3</a>
         </div>
       </div>
-      <FaSignOutAlt className={`${searchcss.icon} ${searchcss.hover}`} />
+      <FaSignOutAlt className={`${searchcss.icon} ${searchcss.hover}`} onClick={handleLogout}/>
     </div>
   );
 }

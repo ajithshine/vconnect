@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import MyProfile from './components/MyProfile/MyProfile';
 import OthersProfile from './components/OthersProfile/OthersProfile';
 import Test from './components/Test';
+import Settings from './components/Settings/Settings';
 
 function App() {
   return (

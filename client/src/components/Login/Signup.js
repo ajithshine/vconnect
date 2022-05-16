@@ -1,38 +1,74 @@
 import { useState } from 'react';
 import Sign from './Signup.module.css';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 export default function Signup() {
-  const [email, setEmail] = useState('')
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [gender, setGender] = useState('male')
-  const [date, setDate] = useState('')
+//   const [email, setEmail] = useState('')
+//   const [username, setUsername] = useState('')
+//   const [password, setPassword] = useState('')
+//   const [confirmPassword, setConfirmPassword] = useState('')
+//   const [gender, setGender] = useState('male')
+//   const [date, setDate] = useState('')
 
 
-  async function registerUser(event) {
-    event.preventDefault()
-    if (password === confirmPassword) {
-      await axios.post('http://localhost:3001/api/register', {
-        email,
-        username,
-        password,
-        gender,
-        date,
-      })
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    } else {
-      alert("Password doesnt match!")
+//   async function registerUser(event) {
+//     event.preventDefault()
+//     if (password === confirmPassword) {
+//       await axios.post('http://localhost:3001/api/auth/register', {
+//         email,
+//         username,
+//         password,
+//         gender,
+//         date,
+//       })
+//         .then(function (response) {
+//           console.log(response);
+//         })
+//         .catch(function (error) {
+//           console.log(error);
+//         });
+//     } else {
+//       alert("Password doesnt match!")
+//     }
+
+//   }
+
+const [data, setData] = useState({
+  email: "",
+  username: "",
+  password: "",
+  gender: "",
+  date: "",
+});
+const [error, setError] = useState("");
+const navigate = useNavigate();
+
+const handleChange = ({ currentTarget: input }) => {
+  setData({ ...data, [input.name]: input.value });
+};
+
+const registerUser = async (e) => {
+  e.preventDefault();
+  if (data.password === data.confirmPassword) {
+  try {
+    const url = "http://localhost:3001/api/auth/register";
+    const { data: res } = await axios.post(url, data);
+    navigate("/");
+    console.log(res.message);
+  } catch (error) {
+    if (
+      error.response &&
+      error.response.status >= 400 &&
+      error.response.status <= 500
+    ) {
+      setError(error.response.data.message);
+      console.log("error")
     }
-
   }
+}
+};
+
 
   return (
     <div className={Sign.container}>
@@ -44,8 +80,9 @@ export default function Signup() {
           <input
             type="email"
             required="required"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={data.email}
+            name="email"
+            onChange={handleChange}
           />
           <span>Email</span>
         </div>
@@ -53,8 +90,9 @@ export default function Signup() {
           <input
             type="text"
             required="required"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={data.username}
+            name='username'
+            onChange={handleChange}
           />
           <span>Username</span>
         </div>
@@ -62,8 +100,9 @@ export default function Signup() {
           <input
             type="password"
             required="required"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={data.password}
+            name='password'
+            onChange={handleChange}
           />
           <span>Password</span>
         </div>
@@ -71,8 +110,9 @@ export default function Signup() {
           <input
             type="password"
             required="required"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            value={data.confirmPassword}
+            name='confirmPassword'
+            onChange={handleChange}
           />
           <span>Confirm Password</span>
         </div>
@@ -84,8 +124,8 @@ export default function Signup() {
                 type="radio"
                 name="select"
                 id="option1"
-                value='male'
-                onChange={(e) => setGender(e.target.value)}
+                value={data.male}
+                onChange={handleChange}
                 required
               />
               <label className={Sign.option}>
@@ -97,8 +137,8 @@ export default function Signup() {
                 type="radio"
                 name="select"
                 id="option2"
-                value='female'
-                onChange={(e) => setGender(e.target.value)}
+                value={data.female}
+                onChange={handleChange}
                 required
               />
               <label className={Sign.option}>
@@ -112,11 +152,13 @@ export default function Signup() {
           <input
             type="date"
             className={Sign.dobinput}
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            value={data.date}
+            name='date'
+            onChange={handleChange}
             required
           />
         </div>
+        {error && <div>{error}</div>}
         <button type="submit" className={Sign.send}>Create account</button>
       </form>
       <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
