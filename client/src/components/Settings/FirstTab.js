@@ -7,12 +7,6 @@ const FirstTab = () => {
           <label for="pass">Username</label>
           <input type="text" id="pass" name="username"
            minLength="8" required></input>
-       
-
-    
-          <label for="mail">Email id</label>
-          <input type="email" id="mail" name="email"
-           minLength="8" required></input>
 
           <label for="bio">Bio</label>
 

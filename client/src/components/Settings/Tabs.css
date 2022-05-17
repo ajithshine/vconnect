@@ -5,35 +5,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-radius: 2rem;
     padding-left: 5px;
     padding-top: 210px;
-    color: #black;
+    color: #000000;
     margin-left:80px;
     margin-top: -223px;
+
+   }
   
     
     @media (max-width: 768px) {
       width: 90%;
     }
-  }
   ul.nav li {
     width: 100%;
     padding: 1rem;
+    margin-bottom: 2%;
     list-style: none;
     text-align: center;
     cursor: pointer;
-    transition: all 0.7s;
-    border-radius: 2rem;
-  }
-  ul.nav li:nth-child(2) {
-    border-radius:2rem;
+    font-weight: bold;
+
+    /* transition: all 0.7s; */
   }
   ul.nav li:hover {
-    background: rgba(50, 224, 196, 0.15);
+    color:#064e72;
   }
   ul.nav li.active {
-    background: #05c7c7;
+    color:rgb(62, 131, 136) ;
   }
   .FirstTab ,
   .SecondTab  {
@@ -65,7 +64,6 @@
     padding-top: 10%;
     font-size: 120%;
     margin-left: 30px;
-    
   
 }
 
@@ -104,13 +102,6 @@ label{
   margin-left: 20%;
   font-size: 80%;
 }
-
-#mail{
-  width: 41%;
-  margin-left:8%;
-  text-align: left;
-  margin-top: 2%;
-}
 #bio{
   margin-left: 14%;
   width: 41%;
@@ -122,6 +113,7 @@ label{
 .bio label{
   text-align: top;
 }
+
 .button{
   background-color: #000000; 
   border: none;
@@ -134,7 +126,7 @@ label{
   margin-left: 45%;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 40em;
+  border-radius: 10px;
 
 }
 .button1 {
@@ -146,10 +138,13 @@ justify-content: space-between;
 align-items: center;
 }
 
+
 .button1:hover {
 background-color:  #02a8a0;
 color: white;
+  
 }
+
 #old{
   width: 41%;
   margin-left: 7%;
