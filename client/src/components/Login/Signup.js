@@ -34,28 +34,37 @@ export default function Signup() {
 
 //   }
 
-const [data, setData] = useState({
-  email: "",
-  username: "",
-  password: "",
-  gender: "",
-  date: "",
-});
+const [email, setEmail] = useState('')
+const [username, setUsername] = useState('')
+const [password, setPassword] = useState('')
+const [confirmPassword, setConfirmPassword] = useState('')
+const [gender, setGender] = useState('male')
+const [date, setDate] = useState('')
+
+
 const [error, setError] = useState("");
 const navigate = useNavigate();
 
-const handleChange = ({ currentTarget: input }) => {
-  setData({ ...data, [input.name]: input.value });
-};
+// const handleChange = ({ currentTarget: input }) => {
+//   setData({ ...data, [input.name]: input.value });
+// };
 
 const registerUser = async (e) => {
   e.preventDefault();
-  if (data.password === data.confirmPassword) {
+  if (password === confirmPassword) {
   try {
+    console.log("success")
     const url = "http://localhost:3001/api/auth/register";
-    const { data: res } = await axios.post(url, data);
+    await axios.post(url,{
+      email,
+      username,
+      password,
+      gender,
+      date,
+    }).then(function (response) {
+       console.log(response);
+      });
     navigate("/");
-    console.log(res.message);
   } catch (error) {
     if (
       error.response &&
@@ -66,6 +75,9 @@ const registerUser = async (e) => {
       console.log("error")
     }
   }
+}
+else{
+  alert("Password donnot match")
 }
 };
 
@@ -80,9 +92,9 @@ const registerUser = async (e) => {
           <input
             type="email"
             required="required"
-            value={data.email}
+            value={email}
             name="email"
-            onChange={handleChange}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <span>Email</span>
         </div>
@@ -90,9 +102,9 @@ const registerUser = async (e) => {
           <input
             type="text"
             required="required"
-            value={data.username}
+            value={username}
             name='username'
-            onChange={handleChange}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <span>Username</span>
         </div>
@@ -100,9 +112,9 @@ const registerUser = async (e) => {
           <input
             type="password"
             required="required"
-            value={data.password}
+            value={password}
             name='password'
-            onChange={handleChange}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <span>Password</span>
         </div>
@@ -110,9 +122,9 @@ const registerUser = async (e) => {
           <input
             type="password"
             required="required"
-            value={data.confirmPassword}
+            value={confirmPassword}
             name='confirmPassword'
-            onChange={handleChange}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <span>Confirm Password</span>
         </div>
@@ -124,8 +136,8 @@ const registerUser = async (e) => {
                 type="radio"
                 name="select"
                 id="option1"
-                value={data}
-                onChange={handleChange}
+                value='male'
+                onChange={(e) => setGender(e.target.value)}
                 required
               />
               <label className={Sign.option}>
@@ -137,8 +149,8 @@ const registerUser = async (e) => {
                 type="radio"
                 name="select"
                 id="option2"
-                value={data.female}
-                onChange={handleChange}
+                value='female'
+                onChange={(e) => setGender(e.target.value)}
                 required
               />
               <label className={Sign.option}>
@@ -152,9 +164,9 @@ const registerUser = async (e) => {
           <input
             type="date"
             className={Sign.dobinput}
-            value={data.date}
+            value={date}
             name='date'
-            onChange={handleChange}
+            onChange={(e) => setDate(e.target.value)}
             required
           />
         </div>

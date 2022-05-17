@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import searchcss from "./Searchbar.module.css";
 import { CgProfile } from "react-icons/cg";
 import { FiSearch } from "react-icons/fi";
@@ -7,9 +7,12 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { FaSignOutAlt } from "react-icons/fa";
 
 export default function Searchbar() {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
 		localStorage.removeItem("token");
-		window.location.reload();
+		// window.location.reload();
+    navigate("/");
 	};
   return (
     <div className={searchcss.outer}>
