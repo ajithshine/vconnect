@@ -124,7 +124,7 @@ const registerUser = async (e) => {
                 type="radio"
                 name="select"
                 id="option1"
-                value={data.male}
+                value={data}
                 onChange={handleChange}
                 required
               />
