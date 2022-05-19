@@ -31,7 +31,7 @@ export default function ProfileDetails() {
         <li>9</li>
         <li>114</li>
       </ul>
-      <button className="button button1">My Relations</button>
+      <button className="button1">My Relations</button>
     </div>
   );
 }

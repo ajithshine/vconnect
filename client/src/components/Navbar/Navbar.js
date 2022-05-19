@@ -22,11 +22,13 @@ export default function Navbar() {
     setImage(event.target.files[0])
   }
 
-  const fileUpload = () =>{
+  const fileUpload = (e) =>{
+    e.preventDefault();
     // const id = localStorage.getItem('id');
     const url='http://localhost:3001/api/posts/';
     const formData = new FormData()
     formData.append('image',image)
+    console.log("success")
     axios.post(url, formData)
     .then((response)=>{
       console.log(response);
@@ -59,7 +61,7 @@ export default function Navbar() {
 
             <Link to='/Settings' className={Navcss.nodec}><li><MdSettings className={Navcss.icons} /> Settings</li></Link>
             <Link to='/MyProfile' className={Navcss.nodec}><li><CgProfile className={Navcss.icons} /> Profile</li></Link> 
-            <li><BsPeopleFill className={Navcss.icons} /> Relation</li>
+            <Link to='/Relations' className={Navcss.nodec}><li><BsPeopleFill className={Navcss.icons} /> Relation</li></Link>
         </ul>
     </div>
   )
