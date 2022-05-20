@@ -2,12 +2,15 @@
   border: 2px solid black;
   height: 90vh;
   width: 25%;
-  position: fixed;
+  /* position: fixed; */
   z-index: 10;
-  left: 40px;
-  top: 20px;
+  /* left: 40px; */
+  /* top: 20px; */
   border-radius: 12px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .pics{
   border-radius: 50%;
@@ -49,27 +52,22 @@
   font-weight: bold;
 
 }
-.button{
-    background-color: #000000; /* Green */
-    border: none;
-    color: white;
-    padding: 11px 27px;
+
+  .button1 {
+    height: 10%;
+    width: 70%;
+    background-color: white; 
+    color: #2ebfbf; 
+    border: 2px solid #2ebfbf;
+    display: flex;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    margin: 34px 90px;
     transition-duration: 0.4s;
     cursor: pointer;
-    border-radius: 40em;
-  
-}
-.button1 {
-  background-color: white; 
-  color: #2ebfbf; 
-  border: 2px solid #2ebfbf;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    border-radius: 30px;
+    margin: 0 auto;
 }
 
 .button1:hover {

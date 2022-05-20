@@ -3,7 +3,7 @@ import axios from 'axios'
 export default function Test() {
   const [abname, setAbname] = useState('')
   const ann = localStorage.getItem('token')
-  const id = '628098963e9ccd40ca66eba3';
+  const id = localStorage.getItem('id');
   const url = 'http://localhost:3001/api/users/'+ id;
   console.log(ann);
     axios.get(url,{

@@ -1,0 +1,27 @@
+
+.outer{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 28%;
+    z-index: -10;
+}
+.inner{
+    width: 80%;
+    height: 100vh;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    background-color:#f1f1f1 ;
+}
+.box{
+    margin-bottom: 5em;
+}
+.naming{
+    padding-left: 3%;
+}
+.post{
+    background-color: red;
+    height: 60vh;
+    width: 100%;
+}

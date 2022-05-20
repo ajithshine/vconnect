@@ -9,6 +9,8 @@ import MyProfile from './components/MyProfile/MyProfile';
 import OthersProfile from './components/OthersProfile/OthersProfile';
 import Test from './components/Test';
 import Settings from './components/Settings/Settings';
+import Feed from './components/Feed/Feed';
+import Relation from './components/Relation/Relation';
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/" element={<Login />} />
         <Route path="/Others" element={<Test />} />
+        <Route path="/Settings" element={<Settings />} />
+        <Route path="/Feed" element={<Feed />} />
+        <Route path="/Relations" element={<Relation />} />
       </Routes>
       </Router>
       

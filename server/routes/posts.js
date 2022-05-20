@@ -7,7 +7,16 @@ const User = require("../models/user");
 router.post("/", authToken, async (req, res) => {
     const newPost = new Post(req.body);
     try {
-        const savedPost = await newPost.save();
+        // const savedPost = await newPost.save();
+        var multer=require('multer')
+        const storage = multer.diskStorage({
+            destination: function (req, file, cb) {
+            cb(null, '/Images')
+            },
+            filename: function (req, file, cb) {
+            cb(null, Date.now() + '-' + file.originalname)
+            }
+        })
         res.status(200).json(savedPost);
     } catch (err) {
         res.status(500).json(err);

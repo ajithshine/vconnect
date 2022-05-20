@@ -48,7 +48,8 @@ export default function Login() {
             .then(function (response) {
                 console.log(response);
                 localStorage.setItem("token", response.data.token);
-                window.location = "/Others";
+                localStorage.setItem("id", response.data.id)
+                window.location = "/Dashboard";
             });
             console.log("success");
 		} catch (error) {

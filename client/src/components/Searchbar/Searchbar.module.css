@@ -4,7 +4,7 @@
 }
 .outer {
   position: fixed;
-  z-index: -1;
+  z-index: 1;
   margin-left: 28%;
   height: 4em;
   width: 72%;
