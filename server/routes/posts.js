@@ -78,7 +78,6 @@ router.get("/timeline/all", authToken,async (req, res) => {
     }
 });
 
-//get Userdetails and post
 
 
 module.exports = router;
