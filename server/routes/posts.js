@@ -7,49 +7,31 @@ const multer = require("multer");
 // SET STORAGE
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'uploads/')
+      cb(null, './uploads/')
     },
     filename: function (req, file, cb) {
+      console.log(file.path);
       cb(null, file.originalname)
     }
   })
    
   
 const imageUpload = multer({
-    storage: storage,
-    limits: {
-      fileSize: 1000000 // 1000000 Bytes = 1 MB
-    },
-    fileFilter(req, file, cb) {
-      if (!file.originalname.match(/\.(png|jpg)$/)) { 
-         // upload only png and jpg format
-         return cb(new Error('Please upload a Image'))
-       }
-     cb(undefined, true)
-  }
+    storage: storage
 }) 
 
-router.post('/uploadfile', imageUpload.single('image'), (req, res, next) => {
-    const file = req.file
-    if (!file) {
-      const error = new Error('Please upload a file')
-      error.httpStatusCode = 400
-      return next(error)
-    }
-      res.send(file)
-    
-  })
-
 // create a post
-// router.post("/", imageUpload.single("image"), async (req, res) => {
-//   const newPost = new Post(req.body);
-//   try {
-//     const savedPost = await newPost.save();
-//     res.status(200).json(savedPost);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+router.post("/", authToken,imageUpload.single("image"), async (req, res) => {
+  console.log(req.file.path);
+  const newPost = new Post(req.body);
+  newPost.img = req.file.path
+  try {
+    const savedPost = await newPost.save();
+    res.status(200).json(savedPost);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //update a post
 router.put("/:id", authToken, async (req, res) => {
