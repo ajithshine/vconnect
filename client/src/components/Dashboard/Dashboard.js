@@ -8,7 +8,7 @@ export default function Dashboard() {
     <div>
         <Navbar />
         <Searchbar />
-        <Feed />
+        {/* <Feed /> */}
     </div>
   )
 }

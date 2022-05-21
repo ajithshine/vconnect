@@ -16,10 +16,10 @@ export default function Feed() {
     }).then(
       (response) => {
         console.log(response.File.name);
-        setPost(response.data.username);
+        setPost(response.File.name);
       }
     );  
-
+      
     axios.get(url2,{
       params:{token:ann}
     }).then(
@@ -34,8 +34,9 @@ export default function Feed() {
           <div className={feedcss.inner}>
             <div className={feedcss.box}>
                 {/* <img src={`data:image/png;base64,${product.img.data}`} /> */}
-            <div className={feedcss.naming}>{abname}</div>
-            <div className={feedcss.post}>{}</div>
+            { post.map((post) => {
+              <div className={feedcss.naming}>{abname}</div>
+            })}
             </div>
     
           </div>  
