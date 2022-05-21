@@ -41,7 +41,7 @@ const User = require("../models/user")
 //     }
 //   });
 
-//get a user using id
+//get a user details using id
 router.get("/:id", authToken, async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
