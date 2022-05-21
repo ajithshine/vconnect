@@ -1,0 +1,43 @@
+.out{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-left: 28%;
+}
+.whole{
+    width: 80%;
+    margin-top: 5em;
+}
+.heading{
+    font-size: 4em;
+    color: black;
+    text-decoration: underline #000000;
+}
+.outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+.card{
+    display: flex;
+    flex:1 1 30rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin:1rem;
+    padding: 0px 15px 0px 15px;
+    overflow: hidden;
+    /* position: relative; */
+    border: 2px solid #000000;
+    border-radius: .5rem;
+    height: 9em;
+    cursor: pointer;
+}
+.name{
+    font-size: 2em;
+    color: #000000;
+}
+.relation{
+    color: #137878;
+}

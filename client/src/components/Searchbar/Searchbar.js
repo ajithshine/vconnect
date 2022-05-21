@@ -1,4 +1,5 @@
 import React from "react";
+import { Link,useNavigate } from "react-router-dom";
 import searchcss from "./Searchbar.module.css";
 import { CgProfile } from "react-icons/cg";
 import { FiSearch } from "react-icons/fi";
@@ -6,6 +7,13 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { FaSignOutAlt } from "react-icons/fa";
 
 export default function Searchbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+		localStorage.removeItem("token");
+		// window.location.reload();
+    navigate("/");
+	};
   return (
     <div className={searchcss.outer}>
       <form className={searchcss.bar}>
@@ -14,7 +22,7 @@ export default function Searchbar() {
         </button>
         <input className="search_box" type="text" placeholder="Search.." name="search"/>
       </form>
-      <CgProfile className={`${searchcss.icon} ${searchcss.hover}`} />
+      <Link to='/MyProfile' className={searchcss.hover}><CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
       <div className={searchcss.hover}>
         <IoNotificationsSharp className={searchcss.icon} />
         <div className={searchcss.dropdowncontent}>
@@ -23,7 +31,7 @@ export default function Searchbar() {
           <a href="#">Link 3</a>
         </div>
       </div>
-      <FaSignOutAlt className={`${searchcss.icon} ${searchcss.hover}`} />
+      <FaSignOutAlt className={`${searchcss.icon} ${searchcss.hover}`} onClick={handleLogout}/>
     </div>
   );
 }

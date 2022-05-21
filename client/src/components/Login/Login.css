@@ -49,8 +49,8 @@
     width: 100%;
     margin-top: 15px;
 }
-.inputbox input,
-.inputbox textarea
+.form .inputbox input
+/* .inputbox textarea */
 {
     width: 100%;
     padding: 5px 0;
@@ -89,7 +89,7 @@ button[type="submit"]
     color: #fff;
     border: none;
     cursor: pointer;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     padding: 10px;
     font-size: 18px;
     transition: .3s ease background-color;
@@ -97,6 +97,12 @@ button[type="submit"]
 button[type="submit"]:hover
 {
     background-color: #04999A;
+}
+
+.send{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sendlink{

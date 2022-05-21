@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+<<<<<<< HEAD
     padding-left: 5px;
     padding-top: 210px;
     color: #000000;
@@ -12,11 +13,20 @@
     margin-top: -223px;
 
    }
+=======
+    border-radius: 2rem;
+    padding-left: 5px;
+    padding-top: 210px;
+    color: #black;
+    margin-left:80px;
+    margin-top: -223px;
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
   
     
     @media (max-width: 768px) {
       width: 90%;
     }
+<<<<<<< HEAD
   ul.nav li {
     width: 100%;
     padding: 1rem;
@@ -33,6 +43,26 @@
   }
   ul.nav li.active {
     color:rgb(62, 131, 136) ;
+=======
+  }
+  ul.nav li {
+    width: 100%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    border-radius: 2rem;
+  }
+  ul.nav li:nth-child(2) {
+    border-radius:2rem;
+  }
+  ul.nav li:hover {
+    background: rgba(50, 224, 196, 0.15);
+  }
+  ul.nav li.active {
+    background: #05c7c7;
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
   }
   .FirstTab ,
   .SecondTab  {
@@ -64,6 +94,10 @@
     padding-top: 10%;
     font-size: 120%;
     margin-left: 30px;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
   
 }
 
@@ -102,6 +136,16 @@ label{
   margin-left: 20%;
   font-size: 80%;
 }
+<<<<<<< HEAD
+=======
+
+#mail{
+  width: 41%;
+  margin-left:8%;
+  text-align: left;
+  margin-top: 2%;
+}
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
 #bio{
   margin-left: 14%;
   width: 41%;
@@ -113,7 +157,10 @@ label{
 .bio label{
   text-align: top;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
 .button{
   background-color: #000000; 
   border: none;
@@ -126,7 +173,11 @@ label{
   margin-left: 45%;
   transition-duration: 0.4s;
   cursor: pointer;
+<<<<<<< HEAD
   border-radius: 10px;
+=======
+  border-radius: 40em;
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
 
 }
 .button1 {
@@ -138,6 +189,7 @@ justify-content: space-between;
 align-items: center;
 }
 
+<<<<<<< HEAD
 
 .button1:hover {
 background-color:  #02a8a0;
@@ -145,6 +197,12 @@ color: white;
   
 }
 
+=======
+.button1:hover {
+background-color:  #02a8a0;
+color: white;
+}
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
 #old{
   width: 41%;
   margin-left: 7%;

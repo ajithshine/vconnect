@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import Sign from './Signup.module.css';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 export default function Signup() {
-  const [email, setEmail] = useState('')
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [gender, setGender] = useState('male')
-  const [date, setDate] = useState('')
+//   const [email, setEmail] = useState('')
+//   const [username, setUsername] = useState('')
+//   const [password, setPassword] = useState('')
+//   const [confirmPassword, setConfirmPassword] = useState('')
+//   const [gender, setGender] = useState('male')
+//   const [date, setDate] = useState('')
 
 
+<<<<<<< HEAD
   async function registerUser(event) {
     event.preventDefault()
     if (password === confirmPassword) {
@@ -30,9 +31,77 @@ export default function Signup() {
         });
     } else {
       alert("Password doesnt match!")
-    }
+=======
+//   async function registerUser(event) {
+//     event.preventDefault()
+//     if (password === confirmPassword) {
+//       await axios.post('http://localhost:3001/api/auth/register', {
+//         email,
+//         username,
+//         password,
+//         gender,
+//         date,
+//       })
+//         .then(function (response) {
+//           console.log(response);
+//         })
+//         .catch(function (error) {
+//           console.log(error);
+//         });
+//     } else {
+//       alert("Password doesnt match!")
+//     }
 
+//   }
+
+const [email, setEmail] = useState('')
+const [username, setUsername] = useState('')
+const [password, setPassword] = useState('')
+const [confirmPassword, setConfirmPassword] = useState('')
+const [gender, setGender] = useState('male')
+const [date, setDate] = useState('')
+
+
+const [error, setError] = useState("");
+const navigate = useNavigate();
+
+// const handleChange = ({ currentTarget: input }) => {
+//   setData({ ...data, [input.name]: input.value });
+// };
+
+const registerUser = async (e) => {
+  e.preventDefault();
+  if (password === confirmPassword) {
+  try {
+    console.log("success")
+    const url = "http://localhost:3001/api/auth/register";
+    await axios.post(url,{
+      email,
+      username,
+      password,
+      gender,
+      date,
+    }).then(function (response) {
+       console.log(response);
+      });
+    navigate("/");
+  } catch (error) {
+    if (
+      error.response &&
+      error.response.status >= 400 &&
+      error.response.status <= 500
+    ) {
+      setError(error.response.data.message);
+      console.log("error")
+>>>>>>> c1a31dca179bca1aa363262b4a0300746f7c274a
+    }
   }
+}
+else{
+  alert("Password donnot match")
+}
+};
+
 
   return (
     <div className={Sign.container}>
@@ -45,6 +114,7 @@ export default function Signup() {
             type="email"
             required="required"
             value={email}
+            name="email"
             onChange={(e) => setEmail(e.target.value)}
           />
           <span>Email</span>
@@ -54,6 +124,7 @@ export default function Signup() {
             type="text"
             required="required"
             value={username}
+            name='username'
             onChange={(e) => setUsername(e.target.value)}
           />
           <span>Username</span>
@@ -63,6 +134,7 @@ export default function Signup() {
             type="password"
             required="required"
             value={password}
+            name='password'
             onChange={(e) => setPassword(e.target.value)}
           />
           <span>Password</span>
@@ -72,6 +144,7 @@ export default function Signup() {
             type="password"
             required="required"
             value={confirmPassword}
+            name='confirmPassword'
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <span>Confirm Password</span>
@@ -113,10 +186,12 @@ export default function Signup() {
             type="date"
             className={Sign.dobinput}
             value={date}
+            name='date'
             onChange={(e) => setDate(e.target.value)}
             required
           />
         </div>
+        {error && <div>{error}</div>}
         <button type="submit" className={Sign.send}>Create account</button>
       </form>
       <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>

@@ -23,6 +23,7 @@
     grid-template-columns: 50% 50%;
     padding: 60px;
     margin-top: 0%;
+    margin: 0 auto;
 }
 
 .inputbox
@@ -32,7 +33,7 @@
     width: 70%;
     margin-top: 15px;
 }
-.inputbox input
+.form .inputbox input
 {
     width: 100%;
     padding: 5px 0;
@@ -100,7 +101,7 @@ button[type="submit"]:hover
 .radiocover1{
     display: flex;
     border: 2px solid black;
-    padding: 10px;
+    padding: 10px ;
     border-radius: 30px;
     width: 20%;
     font-size: 15px;
@@ -145,8 +146,9 @@ button[type="submit"]:hover
 }
 
 .send{
-    margin-left: 220px;
-    
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 .signup1{
     margin-left: 230px;
