@@ -16,20 +16,41 @@ import axios from 'axios';
 export default function Navbar() {
   const [buttonPopup, setButtonPopup]= useState(false);
   const [image,setImage] = useState('')
+  const [description, setDescription] = useState('')
+
+  const [abname, setAbname] = useState('')
+  const ann = localStorage.getItem('token')
+  const id = localStorage.getItem('id');
+  const url = 'http://localhost:3001/api/profile/details'+ id;
+  console.log(ann);
+    axios.get(url,{
+      params:{token:ann}
+    }).then(
+      (response) => {
+        console.log(response);
+        setAbname(response.data.username);
+      }
+  );
 
   const fileSelect = (event) =>{
     console.log(event.target.files)
     setImage(event.target.files[0])
   }
 
+  const fileDescription = (event) =>{
+    console.log(event.target.description)
+    setDescription(event.target.description)
+  }
+
   const fileUpload = (e) =>{
     e.preventDefault();
     // const id = localStorage.getItem('id');
-    const url='http://localhost:3001/api/posts/';
+    const urlProfile= 'http://localhost:3001/api/posts/'
+    axios.get(urlProfile,)
     const formData = new FormData()
     formData.append('image',image)
-    console.log("success")
-    axios.post(url, formData)
+    console.log("success")  //till here its ok
+    axios.post(url, {formData,abname,description})
     .then((response)=>{
       console.log(response);
     })
@@ -49,10 +70,10 @@ export default function Navbar() {
           
        
                 <div className={postcss.inner}>
-                <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple className={postcss.img} onChange={fileSelect}/>
+                <input type="file" id="image_uploads" name="image" accept=".jpg, .jpeg, .png" multiple className={postcss.img} onChange={fileSelect}/>
               
                 <br />
-                <textarea type="text" placeholder='Description' className={postcss.textarea}></textarea>
+                <textarea type="text" placeholder='Description' name='description' className={postcss.textarea} onChange={fileDescription}></textarea>
                 <button type="submit" className="send" onClick={fileUpload}>Post </button>
 
                 </div>
