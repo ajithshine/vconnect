@@ -22,7 +22,6 @@ const imageUpload = multer({
 
 // create a post
 router.post("/", authToken,imageUpload.single("image"), async (req, res) => {
-  console.log(req.file.path);
   const newPost = new Post(req.body);
   newPost.img = req.file.path
   try {
