@@ -41,13 +41,13 @@ export default function Navbar() {
       })
         .then(function (response) {
           //handle success
-          console.log(response);
+          console.log(response.data);
         })
     } catch (error) {
       console.log(error);
     }
 
-
+    setButtonPopup(false);
 
   }
 
