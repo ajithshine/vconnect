@@ -21,7 +21,8 @@ const User = new mongoose.Schema(
             default: []
         },
         description:{
-            type:String
+            type:String,
+            default:"My New Profile"
         }
     },
     { collection: 'user-data' }

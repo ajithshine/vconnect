@@ -4,9 +4,9 @@ const Post = require("../models/post");
 const User = require("../models/user");
 
 //get User details and post
-router.get("/details",authToken,async (req, res) => {
+router.get("/details/:id",authToken,async (req, res) => {
     try {
-        const currentUserDetails = await User.findById(req.body.userId);
+        const currentUserDetails = await User.findById(req.params.id);
         const { password, token, ...other } = currentUserDetails._doc;
         const currentUserPosts = await Post.find({ userId: currentUserDetails._id });
         res.status(200).json({
