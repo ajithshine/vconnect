@@ -79,7 +79,7 @@ router.put("/:id/like", authToken, async (req, res) => {
 });
 
 //get timeline posts
-router.get("/timeline/all", authToken, async (req, res) => {
+router.post("/timeline/all", authToken,async (req, res) => {
   try {
     const currentUser = await User.findById(req.body.userId);
     const userPosts = await Post.find({ userId: currentUser._id });
