@@ -7,7 +7,7 @@ const multer = require("multer");
 // SET STORAGE
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, './uploads/')
+      cb(null, '../../vconnect/client/src/image/')
     },
     filename: function (req, file, cb) {
       console.log(file.path);
@@ -79,9 +79,9 @@ router.put("/:id/like", authToken, async (req, res) => {
 });
 
 //get timeline posts
-router.post("/timeline/all", authToken,async (req, res) => {
+router.get("/timeline/all/:id",authToken,async (req, res) => {
   try {
-    const currentUser = await User.findById(req.body.userId);
+    const currentUser = await User.findById(req.params.id);
     const userPosts = await Post.find({ userId: currentUser._id });
     const friendPosts = await Promise.all(
       currentUser.following.map((friendId) => {

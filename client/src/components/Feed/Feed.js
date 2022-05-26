@@ -1,40 +1,47 @@
-import React from 'react'
-import { ReactDOM } from 'react';
-import { useState } from 'react/cjs/react.development';
-import feedcss from './Feed.module.css';
-import axios from 'axios';
+import React, { useEffect } from "react";
+import { useState } from "react/cjs/react.development";
+import feedcss from "./Feed.module.css";
+import axios from "axios";
+
 export default function Feed() {
-  const [image, setImage] = useState('')
-  const [description, setDescription] = useState('')
-  const [username, setusername] = useState('')
+  const [feedData, setFeedData] = useState([]);
 
-  const id = localStorage.getItem('id');
-  const token = localStorage.getItem('token')
+  const id = localStorage.getItem("id");
+  const token = localStorage.getItem("token");
 
-  axios.get("http://localhost:3001/api/posts/",{
-    params:{token: token}
-  }).then(
-    (response) => {
-      console.log(response);
-    }
-  );
+  const urlApi = "http://localhost:3001/api/posts/timeline/all/" + id;
 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await axios.get(urlApi, {
+          params: { token: token },
+        });
+        await setFeedData(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getData();
+  }, []);
 
   return (
     <div>
-        <div className={feedcss.outer}>
-          <div className={feedcss.inner}>
-            <div className={feedcss.box}>
-            { response.map((response) => {
-              <div className={feedcss.naming}>{response.data.username}</div>
-            })}    
-            { response.map((response) => {
-              <div className={feedcss.post}>{response.data.post}</div>
-            })}
-            </div>
-    
-          </div>  
+      <div className={feedcss.outer}>
+        <div className={feedcss.inner}>
+          {feedData.map((data, index) => {
+            return (
+              <div className={feedcss.box} key={index}>
+                <div className={feedcss.naming}>{data.description}</div>
+                <div className={feedcss.post}>
+                  <img className={feedcss.image} src={process.env.PUBLIC_URL + "pic.jpg"} />
+                </div>
+              </div>
+            );
+          })}
         </div>
+      </div>
     </div>
-  )
+  );
 }

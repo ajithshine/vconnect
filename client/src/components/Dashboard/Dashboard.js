@@ -1,14 +1,15 @@
 import React from 'react'
-import Feed from '../Feed/Feed'
 import Navbar from '../Navbar/Navbar'
 import Searchbar from '../Searchbar/Searchbar'
+import Feed from '../Feed/Feed'
+
 
 export default function Dashboard() {
   return (
     <div>
-        <Navbar />
-        <Searchbar />
-        {/* <Feed /> */}
+      <Navbar />
+      <Searchbar />
+      <Feed />
     </div>
   )
 }
