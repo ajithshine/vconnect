@@ -3,12 +3,15 @@
     --black : #000000;
 }
 
+.post{
+  z-index: -10;
+}
 .inner{
     display: flex;   
     flex-direction: column;
     margin: 0 auto;
     margin-top: 100px;
-    width: 100%
+    width: 100%;
     
 }
 .img::-webkit-file-upload-button {

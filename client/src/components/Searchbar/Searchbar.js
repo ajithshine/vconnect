@@ -20,7 +20,7 @@ export default function Searchbar() {
         <button type="submit" className={searchcss.button}>
           <FiSearch className={searchcss.icons} />
         </button>
-        <input className="search_box" type="text" placeholder="Search.." name="search"/>
+        <input className={searchcss.searchbox} type="text" placeholder="Search.." name="search"/>
       </form>
       <Link to='/MyProfile' className={searchcss.hover}><CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
       <div className={searchcss.hover}>
