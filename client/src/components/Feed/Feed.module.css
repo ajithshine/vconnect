@@ -20,7 +20,11 @@
 .naming{
     padding-left: 3%;
 }
-.post{
+/* .post{
     height: 60vh;
     width: 100%;
+} */
+.image{
+    height: 60vh;
+    width: 50%;
 }

@@ -33,10 +33,10 @@ export default function Feed() {
           {feedData.map((data, index) => {
             return (
               <div className={feedcss.box} key={index}>
-                <div className={feedcss.naming}>{data.description}</div>
                 <div className={feedcss.post}>
-                  <img className={feedcss.image} src={process.env.PUBLIC_URL + "pic.jpg"} />
+                  <img className={feedcss.image} src={process.env.PUBLIC_URL + data.img +".jpg" } />
                 </div>
+                <div className={feedcss.naming}>{data.description}</div>
               </div>
             );
           })}

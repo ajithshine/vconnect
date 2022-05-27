@@ -7,11 +7,11 @@ const multer = require("multer");
 // SET STORAGE
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, '../../vconnect/client/src/image/')
+      cb(null, '../../vconnect/client/public/')
     },
     filename: function (req, file, cb) {
       console.log(file.path);
-      cb(null, file.originalname + Date.now() + '.jpg')
+      cb(null, file.originalname +'.jpg')
     }
   })
    
@@ -23,7 +23,7 @@ const imageUpload = multer({
 // create a post
 router.post("/", authToken,imageUpload.single("image"), async (req, res) => {
   const newPost = new Post(req.body);
-  newPost.img = req.file.path
+  newPost.img = req.file.originalname
   try {
     const savedPost = await newPost.save();
     res.status(200).json(savedPost);
