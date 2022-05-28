@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Searchbar from "../Searchbar/Searchbar";
 import "./ProfileDetails.css";
-import picture from "../Images/pic1.jpg";
+import picture from "../Images/profile_pic.png";
 export default function ProfileDetails() {
   const [data, setData] = useState([])
   const [post, setPost] = useState([])

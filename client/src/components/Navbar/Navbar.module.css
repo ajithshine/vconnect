@@ -9,6 +9,7 @@
     width: 25%;
     height: 100vh;
     background-color: var(--white);
+    
 }
 .heading{
     display: flex;
