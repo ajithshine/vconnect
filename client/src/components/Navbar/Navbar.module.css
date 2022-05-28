@@ -20,7 +20,8 @@
     color: var(--green);
     font-size: 70px;
     font-family: 'Redressed';
-    margin-top: 40px;
+    margin-top: 10px;
+    position: sticky;
 }
 .list{
     list-style-type: none;

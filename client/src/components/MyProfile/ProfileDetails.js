@@ -41,7 +41,7 @@ export default function ProfileDetails() {
         <li>{post.length}</li>
         <li>{following.length}</li>
       </ul>
-      <button className="button1">My Relations</button>
+      <button className="relation">My Relations</button>
     </div>
   );
 }

@@ -10,7 +10,7 @@
   width: 72%;
   display: grid;
   grid-template-columns: 70% 7% 7% 7%;
-  background-color: #e5e5e5;
+  background-color: #f1f1f1;
 }
 .bar {
   padding: 10px;
@@ -19,14 +19,15 @@
   flex-direction: row;
   height: 4em;
   width: 90%;
-  /* position: relative; */
-  /* left: 200px; */
+  /*position: relative; 
+  left: 200px;*/
 }
 input[type="text"]{
   width: 70%;
   padding: 6px;
   font-size: 17px;
   border: none;
+  background-color: #ffffff;
 }
 
 .button[type="submit"] {
@@ -65,8 +66,9 @@ input[type="text"]{
 
 .searchbox{
   border-radius: 0%;
+  color: #ffffff;
 }
-
+/*
 .dropdowncontent {
   display: none;
   position: absolute;
@@ -93,3 +95,4 @@ input[type="text"]{
 .hover:hover .dropdowncontent {
   display: block;
 }
+*/
