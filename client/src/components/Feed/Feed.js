@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 import feedcss from "./Feed.module.css";
 import axios from "axios";
+import picture from "../Images/profile_pic.png";
 
 export default function Feed() {
   const [feedData, setFeedData] = useState([]);
@@ -34,9 +35,12 @@ export default function Feed() {
             return (
               <div className={feedcss.box} key={index}>
                 <div className={feedcss.post}>
+                  <img src={picture} alt="profile picture"/>
+                  <h4>sanoop</h4>
                   <img className={feedcss.image} src={process.env.PUBLIC_URL + data.img +".jpg" } />
+                  <div className={feedcss.naming}><p>{data.description}</p></div>
                 </div>
-                <div className={feedcss.naming}>{data.description}</div>
+                {/*<div className={feedcss.naming}>{data.description}</div>*/}
               </div>
             );
           })}
