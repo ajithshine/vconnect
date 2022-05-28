@@ -24,12 +24,12 @@ export default function Searchbar() {
       </form>
       <Link to='/MyProfile' className={searchcss.hover}><CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
       <div className={searchcss.hover}>
-        <IoNotificationsSharp className={searchcss.icon} />
+        {/*<IoNotificationsSharp className={searchcss.icon} />
         <div className={searchcss.dropdowncontent}>
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
-        </div>
+  </div>*/}
       </div>
       <FaSignOutAlt className={`${searchcss.icon} ${searchcss.hover}`} onClick={handleLogout}/>
     </div>

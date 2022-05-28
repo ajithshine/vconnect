@@ -5,35 +5,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-radius: 2rem;
+   /* border-radius: 2rem;*/
     padding-left: 5px;
     padding-top: 210px;
-    color: #black;
+    color: #000000;
+    font-weight: bold;
     margin-left:80px;
     margin-top: -223px;
-  
-    
-    @media (max-width: 768px) {
-      width: 90%;
-    }
-  }
+   }
   ul.nav li {
     width: 100%;
     padding: 1rem;
     list-style: none;
     text-align: center;
     cursor: pointer;
-    transition: all 0.7s;
     border-radius: 2rem;
   }
-  ul.nav li:nth-child(2) {
+ /* ul.nav li:nth-child(2) {
     border-radius:2rem;
-  }
+  }*/
   ul.nav li:hover {
-    background: rgba(50, 224, 196, 0.15);
+    /*background: rgba(50, 224, 196, 0.15);*/
+    color: #04209e;;
   }
   ul.nav li.active {
-    background: #05c7c7;
+   /* background: #05c7c7;*/
+   color: #041563;
   }
   .FirstTab ,
   .SecondTab  {
@@ -80,21 +77,13 @@
 
 
 }
-.pic{
-    width: 10%;
-    height: 15%;
-    margin-top: 3%;
-    margin-left: -19%;
-    border-radius: 20%;
-    padding-left: 50%;
 
-}
 .outlet{
   align-items: flex-start;
   margin-top: 15%;
   margin-left: -10%;
 }
-#pass{
+#pass1{
   width: 41%;
   margin-left: 5%;
   padding:1%;
@@ -105,36 +94,40 @@ label{
   font-size: 80%;
 }
 
-#mail{
+#pass2{
   width: 41%;
-  margin-left:8%;
+  margin-left:4%;
   text-align: left;
   margin-top: 2%;
 }
 #bio{
-  margin-left: 14%;
+  margin-left: 16%;
   width: 41%;
   margin-top: 2%;
   text-align: left;
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: #f2f2f2;
 }
 .bio label{
   text-align: top;
 }
-.button{
+.first{
   background-color: #000000; 
   border: none;
   color: white;
-  padding: 11px 27px;
+  /*padding: 11px 27px;*/
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin: 34px 90px;
-  margin-left: 45%;
+  margin-top:30px;
+  margin-left: 50%;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 40em;
+  width: 20%;
+  padding:11px;
+  padding-left: 4%;
+
 
 }
 .button1 {
@@ -142,8 +135,8 @@ background-color: white;
 color: #02a8a0; 
 border: 2px solid #02a8a0;
 display: flex;
-justify-content: space-between;
-align-items: center;
+/*justify-content: space-between;
+align-items: center;*/
 }
 
 .button1:hover {
@@ -178,13 +171,33 @@ color: white;
   margin-top: 2%;
   height: 25%;
 }
+.second{
+  background-color: #000000; 
+  border: none;
+  color: white;
+  /*padding: 11px 27px;*/
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top:30px;
+  margin-left: 50%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10em;
+  width: 8%;
+  padding-left: 2%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+}
 .button2 {
   background-color: white; 
   color: #02a8a0; 
   border: 2px solid #02a8a0;
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;*/
   margin-left: 55%;
   }
   

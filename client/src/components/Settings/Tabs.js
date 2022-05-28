@@ -37,10 +37,10 @@ const Tabs = () => {
                 <div className="outlet">
                    {activeTab === "tab1" ? <FirstTab /> : <SecondTab />}
                 </div>
-                <img src={picture} alt="profile picture" className={Setcss.pic} />
+                {/*<img src={picture} alt="profile picture" className={Setcss.pic} />
                    <div>
                        <p>aashlianoop</p>
-                   </div>
+                   </div>*/}
           
             </div>
         </div>

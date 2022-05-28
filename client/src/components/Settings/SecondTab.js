@@ -19,7 +19,7 @@ const SecondTab = () => {
           <input type="password" id="confirm" name="confirm"
            maxlength="8" required></input>
           
-          <button className="button button2">Save</button>
+          <button className="second button2">Save</button>
 
 
   
