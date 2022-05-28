@@ -3,21 +3,23 @@
     --black : #000000;
 }
 .popup{
-    position: fixed;
+    position: absolute;
     z-index: 100;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
+    margin-top: 20%;
+    margin-bottom: 0%;
     top: 0;
     left: 0%;
     background-color: rgba(156, 25, 49, 0.4);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items:center; */
 }
 .inner{
     position: relative;
     z-index: 100;
-    height: 100vh;
+    height: 90vh;
     width: 50vw;
     padding: 30px;
     border: 2px solid var(--black);
@@ -25,7 +27,7 @@
 }
 .close{
     position: fixed;
-    top: 4%;
+    top: 13%;
     left: 70%;
     background-color: transparent;
     border: transparent;
