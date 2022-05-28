@@ -16,6 +16,7 @@
 }
 .inner{
     position: relative;
+    z-index: 100;
     height: 100vh;
     width: 50vw;
     padding: 30px;
