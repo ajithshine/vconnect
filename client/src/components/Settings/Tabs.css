@@ -46,8 +46,8 @@
     color: var(--green);
     font-size: 70px;
     font-family: 'Redressed';
-    margin-top: 5px;
-    margin-left: 40px;
+    margin-top: -5px;
+    margin-left: -15px;
 }
   .container{
     display: flex;
@@ -57,11 +57,12 @@
     width: 55vh;
     height: 75vh;
     border: 1px solid black;
-    margin-top: 1%;
+    margin-top: -4%;
     text-align: center;
     padding-top: 10%;
     font-size: 120%;
     margin-left: 30px;
+
     
   
 }
@@ -70,7 +71,7 @@
     width: 130vh;
     height: 75vh;
     border:1px solid black;
-    margin-top: 1%;
+    margin-top: -4%;
     display: flex;
     flex-direction: row;
     margin-right: 5%;
@@ -83,23 +84,29 @@
   margin-top: 15%;
   margin-left: -10%;
 }
-#pass1{
+/*#pass{
   width: 41%;
   margin-left: 5%;
   padding:1%;
   text-align: left;
+}*/
+#pass{
+  width: 41%;
+  margin-left: 5%;
+  padding:1%;
+  text-align: left;
+  height: 25%;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  border: none;
 }
+
 label{
   margin-left: 20%;
   font-size: 80%;
 }
 
-#pass2{
-  width: 41%;
-  margin-left:4%;
-  text-align: left;
-  margin-top: 2%;
-}
+
 #bio{
   margin-left: 16%;
   width: 41%;
@@ -123,10 +130,11 @@ label{
   margin-left: 50%;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 40em;
-  width: 20%;
+  border-radius: 1em;
+  width: 18%;
   padding:11px;
-  padding-left: 4%;
+  padding-left: 3%;
+  padding-right: 0%;
 
 
 }
@@ -165,7 +173,7 @@ color: white;
 }
 #confirm{
   width: 41%;
-  margin-left: 2%;
+  margin-left: 3%;
   padding:1%;
   text-align: left;
   margin-top: 2%;
@@ -183,7 +191,7 @@ color: white;
   margin-left: 50%;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 10em;
+  border-radius: 1em;
   width: 8%;
   padding-left: 2%;
   padding-right: 3%;

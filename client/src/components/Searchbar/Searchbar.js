@@ -6,6 +6,7 @@ import { FiSearch } from "react-icons/fi";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { FaSignOutAlt } from "react-icons/fa";
 
+
 export default function Searchbar() {
   const navigate = useNavigate();
 
@@ -22,7 +23,8 @@ export default function Searchbar() {
         </button>
         <input className={searchcss.searchbox} type="text" placeholder="Search.." name="search"/>
       </form>
-      <Link to='/MyProfile' className={searchcss.hover}><CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
+
+     <Link to='/MyProfile' className={searchcss.hover}><CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
       <div className={searchcss.hover}>
         {/*<IoNotificationsSharp className={searchcss.icon} />
         <div className={searchcss.dropdowncontent}>
