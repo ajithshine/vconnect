@@ -19,6 +19,7 @@ export default function Navbar() {
   const [description, setDescription] = useState('')
   const id = localStorage.getItem('id');
   const token = localStorage.getItem('token')
+  const username = localStorage.getItem('username')
 
   const fileSelect = (event) => {
     console.log(event.target.name)
@@ -32,6 +33,7 @@ export default function Navbar() {
       bodyFormData.append('userId', id);
       bodyFormData.append('description', description);
       bodyFormData.append('image', image);
+      bodyFormData.append('userName',username);
       axios({
         method: "post",
         url: "http://localhost:3001/api/posts/",

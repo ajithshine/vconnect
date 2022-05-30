@@ -36,7 +36,7 @@ export default function Feed() {
               <div className={feedcss.box} key={index}>
                 <div className={feedcss.post}>
                   <img src={picture} alt="profile picture"/>
-                  <h4>sanoop</h4>
+                  <h4>{data.userName}</h4>
                   <img className={feedcss.image} src={process.env.PUBLIC_URL + data.img +".jpg" } />
                   <div className={feedcss.naming}><p>{data.description}</p></div>
                 </div>

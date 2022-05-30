@@ -21,7 +21,8 @@ export default function Login() {
             .then(function (response) {
                 console.log(response);
                 localStorage.setItem("token", response.data.token);
-                localStorage.setItem("id", response.data.id)
+                localStorage.setItem("id", response.data.id);
+                localStorage.setItem("username",response.data.username);
                 window.location = "/Dashboard";
             });
             console.log("success");

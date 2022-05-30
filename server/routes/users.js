@@ -4,16 +4,16 @@ const User = require("../models/user")
 const bcrypt = require("bcrypt");
 
 // Update Password
-router.put("/update-password/", authToken,async (req, res) => {
-    const { oldPass, newPass ,userId} = req.body;
+router.put("/update-password/", authToken, async (req, res) => {
+    const { oldPass, newPass, userId } = req.body;
     const user = await User.findById(userId);
     const passwordChecking = await bcrypt.compare(oldPass, user.password)
-    if(passwordChecking){
+    if (passwordChecking) {
         const encryptedPassword = await bcrypt.hash(newPass, 10);
-        await User.findByIdAndUpdate(userId,{password:encryptedPassword})
+        await User.findByIdAndUpdate(userId, { password: encryptedPassword })
         res.status(200).json("Your Password is updated")
     }
-    else{
+    else {
         res.status(200).json("Youre Old Password is incorrect")
     }
 })
@@ -75,15 +75,15 @@ router.put("/:id/unfollow", authToken, async (req, res) => {
 });
 
 //search user
-router.post('/search-users',(req,res)=>{
-    let userPattern = new RegExp("^"+req.body.query)
-    User.find({email:{$regex:userPattern}})
-    .select("_id email")
-    .then(user=>{
-        res.json({user})
-    }).catch(err=>{
-        console.log(err)
-    })
+router.post('/search-users', async (req, res) => {
+    let userPattern = new RegExp("^" + req.body.username)
+    await User.find({ username: { $regex: userPattern } })
+        .select("_id username")
+        .then(user => {
+            res.json({ user })
+        }).catch(err => {
+            console.log(err)
+        })
 })
 
 module.exports = router;

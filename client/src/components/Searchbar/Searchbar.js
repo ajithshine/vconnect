@@ -25,14 +25,13 @@ export default function Searchbar() {
       </form>
 
      <Link to='/Dashboard' className={searchcss.hover}><FaHome className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
-     {/* <CgProfile className={`${searchcss.icon} ${searchcss.hover}`} /> */}
       <div className={searchcss.hover}>
         {/*<IoNotificationsSharp className={searchcss.icon} />
         <div className={searchcss.dropdowncontent}>
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
-  </div>*/}
+        </div>*/}
       </div>
       <FaSignOutAlt className={`${searchcss.icon} ${searchcss.hover}`} onClick={handleLogout}/>
     </div>
