@@ -1,46 +1,19 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
-// import { Redirect } from 'react-redirect'
 import axios from 'axios';
 import Post from '../Post/Post';
 
 export default function Login() {
-    // const [username, setUsername] = useState('')
-    // const [password, setPassword] = useState('')
-
-    // async function loginUser(event) {
-    //     event.preventDefault()
-    //     await axios.post('http://localhost:3001/api/login', {
-    //         username,
-    //         password,
-    //     })
-    //         .then(function (response) {
-    //             if(response.data.user){
-    //                 console.log("Login Successful");
-    //                 // <Redirect to={"/Dashboard"} />
-    //             }else{
-    //                 alert("Incorrect Username or Password")
-    //             }
-    //         })
-    //         // .catch(function (error) {
-    //         //     console.log(error);
-    //         // });
-
-    // }
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState("");
 
-	// const handleChange = ({ currentTarget: input }) => {
-	// 	setData({ ...data, [input.name]: input.value });
-	// };
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			// const url = "http://localhost:3001/api/login";
 			await axios.post("http://localhost:3001/api/auth/login", {
                 email,
                 password,

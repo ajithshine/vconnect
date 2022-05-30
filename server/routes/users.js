@@ -73,6 +73,7 @@ router.put("/:id/unfollow", authToken, async (req, res) => {
         res.status(403).json("you cant unfollow yourself");
     }
 });
+
 //search user
 router.post('/search-users',(req,res)=>{
     let userPattern = new RegExp("^"+req.body.query)
