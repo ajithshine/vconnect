@@ -13,14 +13,19 @@ export default function Searchbar() {
   const navigate = useNavigate();
   const [word, setWord] = useState('')
 
+  const [filteredData, setFilteredData] = useState([]);
+  // const [wordEntered, setWordEntered] = useState("");
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     // window.location.reload();
     navigate("/");
   };
 
-  const search = async (e) => {
-    e.preventDefault();
+  const search = async (event) => {
+    event.preventDefault();
+    const searchWord = word;
+  
     try {
       axios({
         method: "post",
@@ -30,16 +35,27 @@ export default function Searchbar() {
         .then(function (response) {
           //handle success
           console.log(response.data.user);
+          const userList = response.data.user;
+          setWord(searchWord)
+          if (searchWord === "") {
+            setFilteredData([]);
+          } else {
+            setFilteredData(userList);
+          }
+
         })
     } catch (error) {
       console.log("error");
     }
-  }
+
+
+  };
 
 
   return (
-    <div className={searchcss.outer}>
-      <form className={searchcss.bar} onSubmit={search}>
+    <div className={searchcss.outer} onSubmit={search}>
+      <form className={searchcss.bar}>
+        <div className={searchcss.down}>
         <input
           className={searchcss.searchbox}
           type="text" placeholder="Search.."
@@ -47,10 +63,24 @@ export default function Searchbar() {
           value={word}
           onChange={(e) => setWord(e.target.value)}
         />
+      {filteredData.length != 0 && (
+        <div className={searchcss.dataResult}>
+          {filteredData.slice(0, 15).map((array) => {
+            return (
+              <a className={searchcss.dataItem} target="_blank">   
+              {/* href={array.username}  */}
+                <p>{array.username} </p>
+              </a>
+            );
+        })}
+        </div>
+      )}
+      </div>
         <button type="submit" className={searchcss.button}>
           <FiSearch className={searchcss.icons} />
         </button>
       </form>
+
 
 
       <Link to='/Dashboard' className={searchcss.hover}><FaHome className={`${searchcss.icon} ${searchcss.hover}`} /></Link>
