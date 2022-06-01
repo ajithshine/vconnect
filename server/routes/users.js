@@ -18,6 +18,19 @@ router.put("/update-password/", authToken, async (req, res) => {
     }
 })
 
+// Update Username and bio
+router.put("/update-userdetails/", async (req, res) => {
+    const { userId, newUsername, bio } = req.body;
+    const user = await User.findById(userId);
+    console.log(req.body)
+    if (userId) {
+        await User.findByIdAndUpdate(userId, { username: newUsername, description: bio })
+        res.status(200).json("Details updated")
+    } else {
+        res.json("Error oCCURED")
+    }
+})
+
 //get a user details using id
 router.get("/:id", authToken, async (req, res) => {
     try {
