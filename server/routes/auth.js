@@ -54,8 +54,7 @@ router.post("/register", async (req, res) => {
         user.token = token;
 
         //save user
-        await user.save()
-        // return new user
+        await user.save()        // return new user
         res.status(201).json(user);
     } catch (err) {
         console.log(err);
@@ -96,7 +95,7 @@ router.post("/login", async (req, res) => {
             "token":user.token,
         });
       }
-      res.status(400).send("Invalid Credentials");
+      res.status(400).json("Invalid Credentials");
     } catch (err) {
       console.log(err);
     }

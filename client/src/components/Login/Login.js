@@ -25,7 +25,6 @@ export default function Login() {
                 localStorage.setItem("username",response.data.username);
                 window.location = "/Dashboard";
             });
-            console.log("success");
 		} catch (error) {
 			if (
 				error.response &&
@@ -33,8 +32,9 @@ export default function Login() {
 				error.response.status <= 500
 			) {
 				setError(error.response.data.message);
-                console.log("error")
+                alert("Invalid Credentials")
 			}
+            
 		}
 	};
 
