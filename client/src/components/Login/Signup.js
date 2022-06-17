@@ -84,10 +84,11 @@ else{
 
   return (
     <div className={Sign.container}>
+      <form className={Sign.form} onSubmit={registerUser}>
       <div className={Sign.heading1}>
         <p className={Sign.heading2}>Sign Up</p>
       </div>
-      <form className={Sign.form} onSubmit={registerUser}>
+        <div className={Sign.boox}>
         <div className={Sign.inputbox}>
           <input
             type="email"
@@ -171,9 +172,12 @@ else{
           />
         </div>
         {error && <div>{error}</div>}
+      </div>  
+        <div className={Sign.sendbox}>
         <button type="submit" className={Sign.send}>Create account</button>
+        <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
+        </div>
       </form>
-      <p className={Sign.signup1}>Have an account? <span><Link to='/' className={Sign.signup2}>Log In</Link></span></p>
     </div>
   )
 }

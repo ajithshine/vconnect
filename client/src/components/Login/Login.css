@@ -58,6 +58,8 @@
     font-size: 20px;
     margin: 9px 0;
     border: none;
+    border-radius: 0%;
+    background-color: transparent;
     border-bottom: 2px solid #000;
     outline: none;
     resize: none;
@@ -111,4 +113,9 @@ button[type="submit"]:hover
     display: flex;
     margin: 0 auto;
     color: var(--white);
+}
+.signup2:hover{
+    background: transparent;
+    color: blue;
+    text-decoration: none;
 }
